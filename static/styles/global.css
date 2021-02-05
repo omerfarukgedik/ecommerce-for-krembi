@@ -1,0 +1,26 @@
+body {
+    font-family: "Bahnschrift";
+    font-size: 1rem;
+  }
+  
+  img {width: 100%};
+  main {  color: rgba(0, 0, 0, 1); }
+  a { text-decoration: none; color: rgba(0, 0, 0, 1); }
+  a:active { color: rgba(0, 0, 0, 1); }
+  a:visited { color: rgba(0, 0, 0, 1); }
+  .text-center { text-align: center; }
+  
+  .page-enter-active,
+  .page-leave-active {
+    transition: opacity 0.2s;
+  }
+  .page-enter,
+  .page-leave-to {
+    opacity: 0;
+  }
+  
+  @media (max-width: 991px) {
+    h1 {
+      font-size: 1.2rem;
+    }
+  }
