@@ -16,7 +16,7 @@ export default {
       { rel: "stylesheet", type: "text/css", href: "/styles/global.css" }
     ],
   },
-  loading: '~/components/LoadingBar.vue',
+  // loading: '~/components/LoadingBar.vue',
   pageTransition: {
     name: 'page',
     mode: 'out-in'
