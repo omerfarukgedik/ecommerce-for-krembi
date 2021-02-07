@@ -1,6 +1,8 @@
 <template>
     <header>
-        <img class="mt-2 mt-lg-5" alt="krembi-logo" src="~/assets/images/logo.png" />
+        <nuxt-link to="/">
+            <img class="mt-2 mt-lg-5" alt="krembi-logo" src="~/assets/images/logo.png" />
+        </nuxt-link>
         <CategoryList :categories="categories" />
     </header>
 </template>
@@ -14,7 +16,7 @@ export default {
     computed: {
     ...mapGetters({
       categories: 'categories/getCategories',
-    }),
+    })
   },
 }
 </script>
@@ -32,10 +34,5 @@ export default {
     header img {
         height: 32px;
         width: 137px;
-    }
-
-    @media (max-width: 991px) {
-        header {
-        }
     }
 </style>

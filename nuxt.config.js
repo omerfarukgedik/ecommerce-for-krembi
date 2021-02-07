@@ -1,6 +1,6 @@
 export default {
   head: {
-    title: 'krembi',
+    title: 'E-Commerce for Krembi',
     htmlAttrs: {
       lang: 'en',
     },
@@ -22,7 +22,10 @@ export default {
     mode: 'out-in'
   },
   css: [],
-  plugins: [],
+  
+  plugins: [
+    { src: '~/plugins/pagination.js', mode: 'client' }
+  ],
   components: true,
   buildModules: ['@nuxt/typescript-build'],
   modules: ['@nuxtjs/axios'],

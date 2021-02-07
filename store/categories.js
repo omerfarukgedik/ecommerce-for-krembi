@@ -26,6 +26,5 @@ import {
   
   export const getters = {
     getCategories: state => state.data,
-    totalCategories: state => state.data.length,
-    getCategoryProducts: state => (id) => state.data.find(obj => obj.id == id)
+    getCategory: state => (id) => state.data.find(obj => obj.id == id),
   }

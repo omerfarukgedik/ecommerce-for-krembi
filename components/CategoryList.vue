@@ -1,6 +1,6 @@
 <template>
     <div class="py-2 py-lg-4 container d-flex flex-wrap justify-content-center">
-        <nuxt-link class="category-item"  v-for="(c, index) in categories" :key="index" :to="'/category/' + c.id"> 
+        <nuxt-link class="category-item" v-for="(c, index) in categories" :key="index" :to="'/category/' + c.id"> 
             {{ c.name }}
         </nuxt-link>
     </div>
@@ -10,9 +10,8 @@
 
 export default {
     props: {
-        categories: {
-            type: Array,
-        }
+        categories: Array,
+        activeItem: Number
     }
 }
 </script>
