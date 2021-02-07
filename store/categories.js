@@ -1,9 +1,9 @@
 import {
-    SET_PRODUCTS,
+    SET_CATEGORIES,
   } from '@/store/types/mutations.type'
   
   import {
-    GET_PRODUCTS,
+    GET_CATEGORIES,
   } from '@/store/types/actions.type'
   
   export const state = () => ({
@@ -12,20 +12,20 @@ import {
   })
   
   export const mutations = {
-    [SET_PRODUCTS] (state, value) {
+    [SET_CATEGORIES] (state, value) {
       state.data = value
       state.loading = false
     }
   }
   
   export const actions = {
-    [GET_PRODUCTS] ({ commit }, value) {
-      commit(SET_PRODUCTS, value)
+    [GET_CATEGORIES] ({ commit }, value) {
+      commit(SET_CATEGORIES, value)
     }
   }
   
   export const getters = {
-    getProducts: state => state.data,
-    totalProducts: state => state.data.length,
-    getProduct: state => (id) => state.data.find(obj => obj.id == id)
+    getCategories: state => state.data,
+    totalCategories: state => state.data.length,
+    getCategoryProducts: state => (id) => state.data.find(obj => obj.id == id)
   }
