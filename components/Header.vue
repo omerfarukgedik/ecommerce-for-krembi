@@ -1,16 +1,31 @@
 <template>
     <header>
-        <img src="~/assets/images/logo.png" />
+        <img class="mt-2 mt-lg-5" alt="krembi-logo" src="~/assets/images/logo.png" />
+        <CategoryList :categories="categories" />
     </header>
 </template>
+
+<script>
+import { mapGetters } from 'vuex'
+import CategoryList from '@/components/CategoryList.vue';
+
+export default {
+    components: { CategoryList },
+    computed: {
+    ...mapGetters({
+      categories: 'categories/getCategories',
+    }),
+  },
+}
+</script>
 
 <style scoped>
     header {
         background: #f8f1f1;
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        justify-content: space-around;
         align-items: center;
-        height: 200px;
         border-bottom: 1px dashed #ddd;
     }
 
@@ -21,7 +36,6 @@
 
     @media (max-width: 991px) {
         header {
-            height: 100px;
         }
     }
 </style>
